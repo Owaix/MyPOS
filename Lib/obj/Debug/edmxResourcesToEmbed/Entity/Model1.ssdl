@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaleMgmtModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Article">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticleTypeID" Type="int" />
+    <Property Name="StyleID" Type="int" />
+    <Property Name="BrandID" Type="int" />
+    <Property Name="ProductName" Type="nvarchar" MaxLength="500" />
+    <Property Name="ProductImage" Type="nvarchar" MaxLength="500" />
+    <Property Name="ArticleNo" Type="nvarchar" MaxLength="500" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IsDelete" Type="bit" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifyBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ArticleTypes">
+    <Key>
+      <PropertyRef Name="ArticleTypeID" />
+    </Key>
+    <Property Name="ArticleTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ArticleTypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COA_M">
+    <Key>
+      <PropertyRef Name="CAC_Code" />
+    </Key>
+    <Property Name="MAC_Code" Type="float" />
+    <Property Name="MTitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="SubAC_Code" Type="float" />
+    <Property Name="SubTitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="CAC_Code" Type="int" Nullable="false" />
+    <Property Name="CATitle" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Colors">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="ShortName" Type="varchar" MaxLength="50" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="IID" Type="int" />
+  </EntityType>
+  <EntityType Name="Customers">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="AC_Code" Type="int" Nullable="false" />
+    <Property Name="CID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CusName" Type="nvarchar" MaxLength="255" />
+    <Property Name="PType_ID" Type="int" />
+    <Property Name="Add" Type="nvarchar" MaxLength="255" />
+    <Property Name="NTN_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="255" />
+    <Property Name="Owner_Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cell" Type="nvarchar" MaxLength="255" />
+    <Property Name="Eml" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="255" />
+    <Property Name="SID" Type="int" />
+    <Property Name="ZID" Type="int" />
+    <Property Name="AddPer" Type="nvarchar" MaxLength="255" />
+    <Property Name="Debit" Type="float" />
+    <Property Name="Credit" Type="float" />
+    <Property Name="Black_List" Type="bit" />
+    <Property Name="War_Cls" Type="nvarchar" MaxLength="255" />
+    <Property Name="War_DT" Type="nvarchar" MaxLength="255" />
+    <Property Name="Prn" Type="nvarchar" MaxLength="255" />
+    <Property Name="InActive" Type="bit" />
+    <Property Name="Land" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="int" />
+    <Property Name="Village" Type="int" />
+    <Property Name="CompanyID" Type="int" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="IID" />
+    </Key>
+    <Property Name="IID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Desc" Type="nvarchar" MaxLength="255" />
+    <Property Name="Unit_ID" Type="int" />
+    <Property Name="Inv_YN" Type="bit" />
+    <Property Name="CompID" Type="int" />
+    <Property Name="BarCode_ID" Type="nvarchar" MaxLength="255" />
+    <Property Name="SCatID" Type="int" />
+    <Property Name="CTN_PCK" Type="int" />
+    <Property Name="PurPrice" Type="float" />
+    <Property Name="SalesPrice" Type="float" />
+    <Property Name="RetailPrice" Type="float" />
+    <Property Name="ICP" Type="int" />
+    <Property Name="OP_Qty" Type="int" />
+    <Property Name="OP_Price" Type="int" />
+    <Property Name="DisContinue" Type="int" />
+    <Property Name="AC_Code_Inv" Type="int" />
+    <Property Name="AC_Code_Inc" Type="int" />
+    <Property Name="AC_Code_Cost" Type="int" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="saleTax" Type="int" />
+    <Property Name="Color" Type="varchar" MaxLength="50" />
+    <Property Name="Size" Type="varchar" MaxLength="50" />
+    <Property Name="ArticleNoID" Type="int" />
+    <Property Name="BarcodeNo" Type="varchar" MaxLength="50" />
+    <Property Name="DisP" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="DisR" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="AveragePrice" Type="int" />
+    <Property Name="RetailPOne" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="RetailPTwo" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="RetailPThree" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="Img" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Items_Cat">
+    <Key>
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Name="CatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Cat" Type="nvarchar" MaxLength="255" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="CompanyID" Type="int" />
+    <Property Name="img" Type="nvarchar(max)" />
+    <Property Name="Images" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Sizes">
+    <Key>
+      <PropertyRef Name="SizeID" />
+    </Key>
+    <Property Name="SizeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SizeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="BranchID" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="IID" Type="int" />
+  </EntityType>
+  <EntityType Name="Styles">
+    <Key>
+      <PropertyRef Name="StyleID" />
+    </Key>
+    <Property Name="StyleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StyleName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KOTID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="isComplete" Type="bit" />
+    <Property Name="Discount" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="Amount" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="TblID" Type="int" />
+    <Property Name="WaiterID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_city">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CityName" Type="varchar" MaxLength="255" />
+    <Property Name="isDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmployeName" Type="varchar" MaxLength="250" />
+    <Property Name="PyteTypeID" Type="int" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="ACCode" Type="int" />
+    <Property Name="companyID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_KOT">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KotNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OrderID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="iscomplete" Type="bit" />
+    <Property Name="CatID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KOTID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="OrderDate" Type="datetime" Nullable="false" />
+    <Property Name="isComplete" Type="bit" />
+    <Property Name="Discount" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="Amount" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="TblID" Type="int" />
+    <Property Name="WaiterID" Type="int" />
+    <Property Name="OrderType" Type="nvarchar" MaxLength="15" />
+    <Property Name="GST" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="userID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_OrderDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderId" Type="int" Nullable="false" />
+    <Property Name="KOTID" Type="nvarchar" MaxLength="20" />
+    <Property Name="itemID" Type="int" />
+    <Property Name="Qty" Type="int" />
+    <Property Name="Rate" Type="decimal" Precision="20" Scale="2" />
+    <Property Name="CatID" Type="int" />
+    <Property Name="itemDtl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_Table">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="250" />
+    <Property Name="isDeleted" Type="bit" />
+    <Property Name="companyID" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Village">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VillageName" Type="varchar" MaxLength="255" />
+    <Property Name="CityID" Type="int" />
+    <Property Name="IsDeleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbl_Warehouse">
+    <Key>
+      <PropertyRef Name="WID" />
+    </Key>
+    <Property Name="WID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Warehouse" Type="varchar" MaxLength="250" />
+    <Property Name="WSht" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblStock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="ItemID" Type="int" Nullable="false" />
+    <Property Name="BatchNO" Type="varchar" MaxLength="50" />
+    <Property Name="Expiry" Type="datetime" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblWaiter">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Vendors">
+    <Key>
+      <PropertyRef Name="VID" />
+    </Key>
+    <Property Name="VID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VendName" Type="nvarchar" MaxLength="255" />
+    <Property Name="PType_ID" Type="int" />
+    <Property Name="Add" Type="nvarchar" MaxLength="255" />
+    <Property Name="NTN_No" Type="nvarchar" MaxLength="255" />
+    <Property Name="ContactPerson" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cell" Type="nvarchar" MaxLength="255" />
+    <Property Name="Eml" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tel" Type="nvarchar" MaxLength="255" />
+    <Property Name="ZID" Type="int" />
+    <Property Name="Debit" Type="float" />
+    <Property Name="Credit" Type="float" />
+    <Property Name="AC_Code" Type="int" />
+    <Property Name="InActive" Type="bit" />
+    <Property Name="Land" Type="varchar" MaxLength="255" />
+    <Property Name="City" Type="int" />
+    <Property Name="Village" Type="int" />
+    <Property Name="CompanyID" Type="int" />
+  </EntityType>
+  <EntityType Name="Zone">
+    <Key>
+      <PropertyRef Name="ZID" />
+    </Key>
+    <Property Name="ZID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Zone" Type="nvarchar" MaxLength="255" />
+    <Property Name="is_Deleted" Type="bit" />
+    <Property Name="CompanyID" Type="int" />
+  </EntityType>
+  <EntityContainer Name="SaleMgmtModelStoreContainer">
+    <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ArticleTypes" EntityType="Self.ArticleTypes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COA_M" EntityType="Self.COA_M" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Colors" EntityType="Self.Colors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items_Cat" EntityType="Self.Items_Cat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sizes" EntityType="Self.Sizes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Styles" EntityType="Self.Styles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_city" EntityType="Self.tbl_city" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Employee" EntityType="Self.tbl_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_KOT" EntityType="Self.tbl_KOT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Order" EntityType="Self.tbl_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_OrderDetails" EntityType="Self.tbl_OrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Table" EntityType="Self.tbl_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Village" EntityType="Self.tbl_Village" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Warehouse" EntityType="Self.tbl_Warehouse" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblStock" EntityType="Self.tblStock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblWaiter" EntityType="Self.tblWaiter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vendors" EntityType="Self.Vendors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zone" EntityType="Self.Zone" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

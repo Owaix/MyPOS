@@ -1,0 +1,2 @@
+alter table Pur_M 
+Add InvType nvarchar(20)
