@@ -39,7 +39,7 @@ namespace Lib.Model
         public Nullable<decimal> GST { get; set; }
         public tbl_Order Order { get; set; } //= new tbl_Order();
         public List<tbl_OrderDetails> OrderDetailsModel { get; set; } //= new List<tbl_OrderDetails>();
-        public decimal DeliveryCharges { get; set; } = 0;
+        public decimal DeliveryCharges { get; set; } //= 0;
     }
 
     public class OrderDetailsModel
