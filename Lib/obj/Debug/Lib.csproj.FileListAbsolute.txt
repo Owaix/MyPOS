@@ -54,3 +54,15 @@ D:\POS\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
 D:\POS\Lib\obj\Debug\Lib.csproj.CopyComplete
 D:\POS\Lib\obj\Debug\Lib.dll
 D:\POS\Lib\obj\Debug\Lib.pdb
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\Lib.dll.config
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\Lib.dll
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\Lib.pdb
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\EntityFramework.dll
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\EntityFramework.xml
+C:\Users\HP\source\repos\MyPOS\Lib\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\HP\source\repos\MyPOS\Lib\obj\Debug\Lib.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\MyPOS\Lib\obj\Debug\Lib.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\MyPOS\Lib\obj\Debug\Lib.csproj.CopyComplete
+C:\Users\HP\source\repos\MyPOS\Lib\obj\Debug\Lib.dll
+C:\Users\HP\source\repos\MyPOS\Lib\obj\Debug\Lib.pdb

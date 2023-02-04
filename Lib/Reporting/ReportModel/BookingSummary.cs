@@ -81,13 +81,13 @@ namespace Lib.Reporting.ReportModel
         public String totalopd8Pat { get; set; }
 
         public String Opd8recNo { get; set; }
-        public String Location { get; set; } = "";
+        public String Location { get; set; } //= "";
         public String bed { get; set; }
         public String email { get; set; }
         public int MRI { get; set; } = 0;
-        public int UltraSound { get; set; } = 0;
-        public int CTScan { get; set; } = 0;
-        public int XRay { get; set; } = 0;
+        public int UltraSound { get; set; } //= 0;
+        public int CTScan { get; set; } //= 0;
+        public int XRay { get; set; } //= 0;
 
         #endregion
 

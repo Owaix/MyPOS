@@ -15,9 +15,9 @@ namespace Com.LT.LabExpress.Reporting
 
         public String patientCode { get; set; }
         
-        public int labDeptID { get; set; } = 0;
+        public int labDeptID { get; set; } //= 0;
 
-        public string labDeptName { get; set; } = "";
+        public string labDeptName { get; set; } //= "";
         
         public string ward { get; set; }
 

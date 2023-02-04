@@ -37,8 +37,8 @@ namespace Lib.Model
         public float RowHeight { get; set; }
         public string item { get; set; }
         public Nullable<decimal> GST { get; set; }
-        public tbl_Order Order { get; set; } = new tbl_Order();
-        public List<tbl_OrderDetails> OrderDetailsModel { get; set; } = new List<tbl_OrderDetails>();
+        public tbl_Order Order { get; set; } //= new tbl_Order();
+        public List<tbl_OrderDetails> OrderDetailsModel { get; set; } //= new List<tbl_OrderDetails>();
         public decimal DeliveryCharges { get; set; } = 0;
     }
 

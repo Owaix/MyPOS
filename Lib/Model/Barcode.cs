@@ -13,7 +13,7 @@ namespace Lib.Model
         public double? SalesPrice { get; set; }
         public string IName { get; set; }
         public int Quantity { get; set; }
-        public string ArticleNo { get; set; } = "000";
+        public string ArticleNo { get; set; } //= "000";
         public string BarCodeNo { get; set; }
     }
 }
