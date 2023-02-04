@@ -12,7 +12,7 @@ namespace LabExpressDesktop.Reporting
     public partial class OrderItemsSummary : Form
     {
         #region -- Global variables start --
-        bool isNight { get; set; } = false;
+        bool isNight { get; set; } //= false;
         SaleManagerEntities db = null;
         #endregion -- Global variable end --
         AspNetUser user = null;
