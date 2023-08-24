@@ -107,6 +107,8 @@ namespace SalesMngmt
         {
             String DestPath = @"D:\Backup";
             String DbName = "SaleMgmt";
+            string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\db\SaleMgmt.mdf;Integrated Security=True";
+
             try
             {
                 string databaseName = DbName;//dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].FormattedValue.ToString();
@@ -129,7 +131,8 @@ namespace SalesMngmt
                 ////Define Server connection
 
                 //ServerConnection connection = new ServerConnection(frm.serverName, frm.userName, frm.password);
-                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
+                //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
+                SqlConnection con = new SqlConnection(constring);
                 ServerConnection connection = new ServerConnection(con);
                 ////To Avoid TimeOut Exception
                 Server sqlServer = new Server(connection);

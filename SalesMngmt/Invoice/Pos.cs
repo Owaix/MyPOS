@@ -27,6 +27,8 @@ namespace SalesMngmt.Invoice
         bool DineIn = true;
         AspNetUser UserObj = null;
         String CurrentBlock = "";
+        public Boolean isMax = true;
+
         public Pos(AspNetUser _usr)
         {
             InitializeComponent();
@@ -36,6 +38,11 @@ namespace SalesMngmt.Invoice
 
         private void Pos_Load(object sender, EventArgs e)
         {
+            if (isMax)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+
             lblBusinessName.Text = ConfigurationManager.AppSettings["BusinessName"];
             pnlTab2.Visible = false;
             generateCategory();
@@ -354,7 +361,7 @@ namespace SalesMngmt.Invoice
                 locY += 120;
             }
         }
-        String btnName = String.Empty;
+        String btnName = String.Empty;        
         protected void MetroTile_Clickitem(object sender, EventArgs e)
         {
 
@@ -363,7 +370,13 @@ namespace SalesMngmt.Invoice
                 var result = MessageBox.Show("Table Is Not Selected In Dine In", "Choose Table First", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
+                    if (this.WindowState == FormWindowState.Maximized)
+                        this.isMax = true;
+                    else
+                        this.isMax = false;
+
                     TablsList table = new TablsList(0, "new", lblTblID.Text, UserObj);
+                    table.isMax = isMax;
                     this.Hide();
                     table.Show();
                     return;

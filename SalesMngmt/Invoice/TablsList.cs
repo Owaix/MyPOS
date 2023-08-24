@@ -14,6 +14,8 @@ namespace SalesMngmt.Invoice
         List<tblStock> stock = null;
         String tblStat = "";
         AspNetUser user = null;
+        public Boolean isMax = false;
+
         public TablsList(int Company, String tblStatus, string CurrentTbl, AspNetUser _Usr)
         {
             InitializeComponent();
@@ -104,7 +106,7 @@ namespace SalesMngmt.Invoice
         {
             MetroTile button = sender as MetroTile;
             Pos pos = new Pos(user);
-
+            pos.isMax = this.isMax;
             var chk = pos.TableSelected(button.Name, tblStat, lblTblID.Text);
             if (chk)
             {
@@ -118,6 +120,7 @@ namespace SalesMngmt.Invoice
         private void TablsList_FormClosing(object sender, System.Windows.Forms.FormClosingEventArgs e)
         {
             Pos pos = new Pos(user);
+            pos.isMax = this.isMax;
             this.Dispose();
             pos.Show();
             //pos.WindowState = FormWindowState.Maximized;
