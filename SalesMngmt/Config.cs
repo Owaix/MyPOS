@@ -28,9 +28,10 @@ namespace SalesMngmt
 
         private void customerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //Customer cst = new Customer(CompanyID);
-            //cst.MdiParent = this;
-            //cst.Show();
+
+            Tables category = new Tables(CompanyID);
+            category.MdiParent = this;
+            category.Show();
         }
 
         private void itemsToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -119,6 +120,11 @@ namespace SalesMngmt
             this.Dispose();
             Main form = new Main(CompanyID, Usr);
             form.Show();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, System.Windows.Forms.ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

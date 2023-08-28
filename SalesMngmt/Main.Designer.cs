@@ -44,6 +44,7 @@ namespace SalesMngmt
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile9 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
@@ -52,7 +53,6 @@ namespace SalesMngmt
             this.metroButton5 = new MetroFramework.Controls.MetroButton();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -71,18 +71,20 @@ namespace SalesMngmt
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(20, 60);
+            this.panel1.Location = new System.Drawing.Point(27, 74);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(760, 379);
+            this.panel1.Size = new System.Drawing.Size(1013, 466);
             this.panel1.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(200, 0);
+            this.panel4.Location = new System.Drawing.Point(267, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(560, 279);
+            this.panel4.Size = new System.Drawing.Size(746, 343);
             this.panel4.TabIndex = 2;
             // 
             // pictureBox2
@@ -90,8 +92,9 @@ namespace SalesMngmt
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(560, 279);
+            this.pictureBox2.Size = new System.Drawing.Size(746, 343);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -103,9 +106,10 @@ namespace SalesMngmt
             this.panel3.Controls.Add(this.metroTile3);
             this.panel3.Controls.Add(this.metroTile2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(200, 279);
+            this.panel3.Location = new System.Drawing.Point(267, 343);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(560, 100);
+            this.panel3.Size = new System.Drawing.Size(746, 123);
             this.panel3.TabIndex = 1;
             // 
             // metroTile8
@@ -114,9 +118,10 @@ namespace SalesMngmt
             this.metroTile8.BackColor = System.Drawing.Color.DodgerBlue;
             this.metroTile8.Controls.Add(this.label1);
             this.metroTile8.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.metroTile8.Location = new System.Drawing.Point(8, 7);
+            this.metroTile8.Location = new System.Drawing.Point(11, 9);
+            this.metroTile8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(127, 86);
+            this.metroTile8.Size = new System.Drawing.Size(169, 106);
             this.metroTile8.TabIndex = 4;
             this.metroTile8.Text = "TODAY";
             this.metroTile8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -130,9 +135,10 @@ namespace SalesMngmt
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(49, 43);
+            this.label1.Location = new System.Drawing.Point(65, 53);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 25);
+            this.label1.Size = new System.Drawing.Size(30, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "0";
             // 
@@ -142,9 +148,10 @@ namespace SalesMngmt
             this.metroTile4.BackColor = System.Drawing.Color.Pink;
             this.metroTile4.Controls.Add(this.label5);
             this.metroTile4.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.metroTile4.Location = new System.Drawing.Point(409, 8);
+            this.metroTile4.Location = new System.Drawing.Point(545, 10);
+            this.metroTile4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(141, 86);
+            this.metroTile4.Size = new System.Drawing.Size(188, 106);
             this.metroTile4.TabIndex = 3;
             this.metroTile4.Text = "SALES";
             this.metroTile4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -158,9 +165,10 @@ namespace SalesMngmt
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(59, 43);
+            this.label5.Location = new System.Drawing.Point(79, 53);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(25, 25);
+            this.label5.Size = new System.Drawing.Size(30, 31);
             this.label5.TabIndex = 0;
             this.label5.Text = "0";
             // 
@@ -170,9 +178,10 @@ namespace SalesMngmt
             this.metroTile3.BackColor = System.Drawing.Color.Plum;
             this.metroTile3.Controls.Add(this.label4);
             this.metroTile3.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.metroTile3.Location = new System.Drawing.Point(275, 8);
+            this.metroTile3.Location = new System.Drawing.Point(367, 10);
+            this.metroTile3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(127, 86);
+            this.metroTile3.Size = new System.Drawing.Size(169, 106);
             this.metroTile3.TabIndex = 2;
             this.metroTile3.Text = "PAYMENT";
             this.metroTile3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -186,9 +195,10 @@ namespace SalesMngmt
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(45, 43);
+            this.label4.Location = new System.Drawing.Point(60, 53);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(25, 25);
+            this.label4.Size = new System.Drawing.Size(30, 31);
             this.label4.TabIndex = 0;
             this.label4.Text = "0";
             // 
@@ -198,9 +208,10 @@ namespace SalesMngmt
             this.metroTile2.BackColor = System.Drawing.Color.SkyBlue;
             this.metroTile2.Controls.Add(this.label3);
             this.metroTile2.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.metroTile2.Location = new System.Drawing.Point(142, 8);
+            this.metroTile2.Location = new System.Drawing.Point(189, 10);
+            this.metroTile2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(127, 86);
+            this.metroTile2.Size = new System.Drawing.Size(169, 106);
             this.metroTile2.TabIndex = 1;
             this.metroTile2.Text = "PURCHASE";
             this.metroTile2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -214,9 +225,10 @@ namespace SalesMngmt
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 43);
+            this.label3.Location = new System.Drawing.Point(64, 53);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(25, 25);
+            this.label3.Size = new System.Drawing.Size(30, 31);
             this.label3.TabIndex = 0;
             this.label3.Text = "0";
             // 
@@ -229,18 +241,42 @@ namespace SalesMngmt
             this.panel2.Controls.Add(this.metroTile1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 379);
+            this.panel2.Size = new System.Drawing.Size(267, 466);
             this.panel2.TabIndex = 0;
+            // 
+            // metroTile6
+            // 
+            this.metroTile6.ActiveControl = null;
+            this.metroTile6.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroTile6.ForeColor = System.Drawing.Color.Black;
+            this.metroTile6.Location = new System.Drawing.Point(12, 286);
+            this.metroTile6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.metroTile6.Name = "metroTile6";
+            this.metroTile6.Size = new System.Drawing.Size(243, 90);
+            this.metroTile6.TabIndex = 5;
+            this.metroTile6.Text = "SETTINGS";
+            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroTile6.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile6.TileImage")));
+            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
+            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
+            this.metroTile6.UseCustomBackColor = true;
+            this.metroTile6.UseCustomForeColor = true;
+            this.metroTile6.UseSelectable = true;
+            this.metroTile6.UseTileImage = true;
+            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click_2);
             // 
             // metroTile9
             // 
             this.metroTile9.ActiveControl = null;
             this.metroTile9.BackColor = System.Drawing.Color.DodgerBlue;
             this.metroTile9.ForeColor = System.Drawing.Color.Black;
-            this.metroTile9.Location = new System.Drawing.Point(9, 307);
+            this.metroTile9.Location = new System.Drawing.Point(12, 378);
+            this.metroTile9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(182, 65);
+            this.metroTile9.Size = new System.Drawing.Size(243, 80);
             this.metroTile9.TabIndex = 4;
             this.metroTile9.Text = "BACKUP";
             this.metroTile9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,9 +295,10 @@ namespace SalesMngmt
             this.metroTile7.ActiveControl = null;
             this.metroTile7.BackColor = System.Drawing.Color.DodgerBlue;
             this.metroTile7.ForeColor = System.Drawing.Color.Black;
-            this.metroTile7.Location = new System.Drawing.Point(9, 157);
+            this.metroTile7.Location = new System.Drawing.Point(12, 193);
+            this.metroTile7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile7.Name = "metroTile7";
-            this.metroTile7.Size = new System.Drawing.Size(182, 73);
+            this.metroTile7.Size = new System.Drawing.Size(243, 90);
             this.metroTile7.TabIndex = 2;
             this.metroTile7.Text = "REPORTS";
             this.metroTile7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -280,9 +317,10 @@ namespace SalesMngmt
             this.metroTile5.ActiveControl = null;
             this.metroTile5.BackColor = System.Drawing.Color.DodgerBlue;
             this.metroTile5.ForeColor = System.Drawing.Color.Black;
-            this.metroTile5.Location = new System.Drawing.Point(9, 82);
+            this.metroTile5.Location = new System.Drawing.Point(12, 101);
+            this.metroTile5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile5.Name = "metroTile5";
-            this.metroTile5.Size = new System.Drawing.Size(182, 73);
+            this.metroTile5.Size = new System.Drawing.Size(243, 90);
             this.metroTile5.TabIndex = 1;
             this.metroTile5.Text = "POS";
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -301,9 +339,10 @@ namespace SalesMngmt
             this.metroTile1.ActiveControl = null;
             this.metroTile1.BackColor = System.Drawing.Color.DodgerBlue;
             this.metroTile1.ForeColor = System.Drawing.Color.Black;
-            this.metroTile1.Location = new System.Drawing.Point(9, 7);
+            this.metroTile1.Location = new System.Drawing.Point(12, 9);
+            this.metroTile1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(182, 73);
+            this.metroTile1.Size = new System.Drawing.Size(243, 90);
             this.metroTile1.TabIndex = 0;
             this.metroTile1.Text = "CONFIG";
             this.metroTile1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -321,9 +360,10 @@ namespace SalesMngmt
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(579, 28);
+            this.label2.Location = new System.Drawing.Point(772, 34);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(11, 13);
+            this.label2.Size = new System.Drawing.Size(13, 17);
             this.label2.TabIndex = 12;
             this.label2.Text = ".";
             // 
@@ -331,9 +371,10 @@ namespace SalesMngmt
             // 
             this.metroButton5.BackColor = System.Drawing.Color.Crimson;
             this.metroButton5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.metroButton5.Location = new System.Drawing.Point(715, 18);
+            this.metroButton5.Location = new System.Drawing.Point(953, 22);
+            this.metroButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(55, 28);
+            this.metroButton5.Size = new System.Drawing.Size(73, 34);
             this.metroButton5.Style = MetroFramework.MetroColorStyle.Purple;
             this.metroButton5.TabIndex = 19;
             this.metroButton5.Text = "LOGOUT";
@@ -347,55 +388,38 @@ namespace SalesMngmt
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(162, 443);
+            this.label6.Location = new System.Drawing.Point(216, 545);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(11, 13);
+            this.label6.Size = new System.Drawing.Size(13, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = ".";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(530, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(707, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 33);
+            this.pictureBox1.Size = new System.Drawing.Size(57, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
-            // metroTile6
-            // 
-            this.metroTile6.ActiveControl = null;
-            this.metroTile6.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroTile6.ForeColor = System.Drawing.Color.Black;
-            this.metroTile6.Location = new System.Drawing.Point(9, 232);
-            this.metroTile6.Name = "metroTile6";
-            this.metroTile6.Size = new System.Drawing.Size(182, 73);
-            this.metroTile6.TabIndex = 5;
-            this.metroTile6.Text = "SETTINGS";
-            this.metroTile6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroTile6.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile6.TileImage")));
-            this.metroTile6.TileImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.metroTile6.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.metroTile6.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.metroTile6.UseCustomBackColor = true;
-            this.metroTile6.UseCustomForeColor = true;
-            this.metroTile6.UseSelectable = true;
-            this.metroTile6.UseTileImage = true;
-            this.metroTile6.Click += new System.EventHandler(this.metroTile6_Click_2);
-            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 459);
+            this.ClientSize = new System.Drawing.Size(1067, 565);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Main";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "IMOWAIS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);

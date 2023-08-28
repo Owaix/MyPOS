@@ -17,6 +17,15 @@ namespace SalesMngmt.Utility
             return text;
         }
 
+        public static decimal ToDecimal(this object text)
+        {
+            if (text == null || text.ToString() == "")
+            {
+                text = "0";
+            }
+            return Convert.ToDecimal(text);
+        }
+
         public static string DefaultZero(this object text)
         {
             if (text == null)

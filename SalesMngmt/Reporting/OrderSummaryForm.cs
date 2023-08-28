@@ -43,6 +43,15 @@ namespace LabExpressDesktop.Reporting
             endDate.Value = DateTime.Today.AddDays(1).AddSeconds(-1);
             PopulateUsers();
             getuserTime();
+
+            List<Dict> dict = new List<Dict>();
+            dict.Add(new Dict { key = 0, Value = "All" });
+            dict.Add(new Dict { key = 1, Value = "Delivery" });
+            dict.Add(new Dict { key = 2, Value = "Dine-In" });
+            dict.Add(new Dict { key = 3, Value = "Take Away" });
+            dict.Add(new Dict { key = 4, Value = "Express" });
+
+            FillCombo<Dict>(cmbOrder, dict, "Value", "Key");
             FillCombo<Dict>(comboBox1, GetPaymentType(), "Value", "Key");
             //    this.rptBookingSummary.RefreshReport();
         }
@@ -67,11 +76,22 @@ namespace LabExpressDesktop.Reporting
 
             rptBookingSummary.LocalReport.DataSources.Clear();
             list = Lib.Reporting.Reports.BookingSummary(dtStart, dtEnd, ddlUsers.Text, comboBox1.SelectedValue.ToString());
+
+            if (cmbOrder.SelectedValue.ToString() == "0")
+                list = list;
+            if (cmbOrder.SelectedValue.ToString() == "1")
+                list = list.Where(x => x.ordrType.StartsWith("H")).ToList();
+            if (cmbOrder.SelectedValue.ToString() == "2")
+                list = list.Where(x => x.ordrType.StartsWith("D")).ToList();
+            if (cmbOrder.SelectedValue.ToString() == "3")
+                list = list.Where(x => x.ordrType.StartsWith("T")).ToList();
+            if (cmbOrder.SelectedValue.ToString() == "4")
+                list = list.Where(x => x.ordrType.StartsWith("E")).ToList();
+
             rptBookingSummary.LocalReport.DataSources.Add(new ReportDataSource("Ds", list));
             this.rptBookingSummary.RefreshReport();
             button1.Enabled = true;
         }
-
 
         #region -- Helper Method Start --
 
@@ -82,11 +102,11 @@ namespace LabExpressDesktop.Reporting
             {
                 AspNetUser objusers = new AspNetUser();
                 objusers.Id = "0";
-                objusers.UserName = "all";
+                objusers.UserName = "All";
                 ul.Add(objusers);
                 ddlUsers.DisplayMember = "username";
                 ddlUsers.ValueMember = "userid";
-                ddlUsers.DataSource = ul.OrderByDescending(x => x.UserName == "all").ThenBy(x => x.UserName).ToList();
+                ddlUsers.DataSource = ul.OrderByDescending(x => x.UserName == "All").ThenBy(x => x.UserName).ToList();
             }
             else { ddlUsers.DataSource = null; }
         }

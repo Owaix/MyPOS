@@ -9,6 +9,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
+using TrialApp;
 
 namespace SalesMngmt
 {
@@ -169,7 +170,8 @@ namespace SalesMngmt
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
-            //Signin signi = new Signin();
+            Environment.Exit(1);
+                //Signin signi = new Signin();
             //signi.Show();
         }
 

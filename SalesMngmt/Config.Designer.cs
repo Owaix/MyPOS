@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Config));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cOAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -38,14 +38,13 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.cOAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerToolStripMenuItem,
             this.itemsToolStripMenuItem,
             this.itemsToolStripMenuItem1,
             this.supplierToolStripMenuItem,
@@ -53,25 +52,22 @@
             this.toolStripMenuItem1,
             this.toolStripMenuItem2,
             this.toolStripMenuItem3,
-            this.cOAToolStripMenuItem});
+            this.cOAToolStripMenuItem,
+            this.customerToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(20, 60);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(760, 87);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
-            // customerToolStripMenuItem
+            // cOAToolStripMenuItem
             // 
-            this.customerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("customerToolStripMenuItem.Image")));
-            this.customerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(76, 83);
-            this.customerToolStripMenuItem.Text = "Customer";
-            this.customerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.customerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.customerToolStripMenuItem.Visible = false;
-            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
+            this.cOAToolStripMenuItem.Name = "cOAToolStripMenuItem";
+            this.cOAToolStripMenuItem.Size = new System.Drawing.Size(44, 83);
+            this.cOAToolStripMenuItem.Text = "COA";
+            this.cOAToolStripMenuItem.Visible = false;
+            this.cOAToolStripMenuItem.Click += new System.EventHandler(this.cOAToolStripMenuItem_Click);
             // 
             // itemsToolStripMenuItem
             // 
@@ -158,13 +154,17 @@
             this.toolStripMenuItem3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
-            // cOAToolStripMenuItem
+            // customerToolStripMenuItem
             // 
-            this.cOAToolStripMenuItem.Name = "cOAToolStripMenuItem";
-            this.cOAToolStripMenuItem.Size = new System.Drawing.Size(44, 83);
-            this.cOAToolStripMenuItem.Text = "COA";
-            this.cOAToolStripMenuItem.Visible = false;
-            this.cOAToolStripMenuItem.Click += new System.EventHandler(this.cOAToolStripMenuItem_Click);
+            this.customerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("customerToolStripMenuItem.Image")));
+            this.customerToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customerToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(76, 83);
+            this.customerToolStripMenuItem.Text = "Tables";
+            this.customerToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.customerToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // Config
             // 

@@ -2,6 +2,7 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
+using TrialApp;
 
 namespace SalesMngmt
 {
@@ -16,6 +17,30 @@ namespace SalesMngmt
 
         private void Signin_Load(object sender, EventArgs e)
         {
+            //  checkTrail();
+        }
+
+        private void checkTrail()
+        {
+            Trail trail = new Trail();
+            DateTime installDate = trail.GetInstallationDate();
+            int launchCount = trail.GetLaunchCount();
+
+            TimeSpan trialDuration = DateTime.Now - installDate;
+            int remainingDays = 30 - trialDuration.Days;
+
+            if (remainingDays > 0)
+            {
+                lblTrail.Text = "Trial period remaining: " + remainingDays + " days";
+                // Continue using the application
+            }
+            else
+            {
+                lblTrail.Text = "Your trial period has expired.";
+                //Close();
+            }
+            // Increment the launch count and save it
+            trail.SaveLaunchCount(launchCount + 1);
 
         }
 
