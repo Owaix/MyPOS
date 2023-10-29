@@ -4,17 +4,17 @@
   <description asmv2:publisher="SalesMngmt" co.v1:suiteName="OWais" asmv2:product="SalesMngmt" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.5.2" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="SalesMngmt.exe.manifest" size="59162">
+    <dependentAssembly dependencyType="install" codebase="SalesMngmt.exe.manifest" size="56387">
       <assemblyIdentity name="SalesMngmt.exe" version="1.0.0.46" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SwHCKXHm/Pq9q94VMFvaxmoAKokZ360bahfpg6mNqgY=</dsig:DigestValue>
+        <dsig:DigestValue>VKH9MHB7v5WvvNNhy9+IUcWTqapdKNt0LtXjrAHB4S4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -9,7 +9,6 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
-using TrialApp;
 
 namespace SalesMngmt
 {
@@ -25,7 +24,6 @@ namespace SalesMngmt
             User = Usr;
             db = new SaleManagerEntities();
         }
-
         private void Main_Load(object sender, EventArgs e)
         {
             try
@@ -63,47 +61,40 @@ namespace SalesMngmt
 
             }
         }
-
         private void metroPanel3_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void metroTile1_Click(object sender, EventArgs e)
         {
             this.Dispose();
             Config config = new Config(cmpID, User);
             config.Show();
         }
-
         private void metroTile5_Click(object sender, EventArgs e)
         {
             this.Dispose();
             Pos con = new Pos(User);
             con.Show();
         }
-
         private void metroButton5_Click(object sender, EventArgs e)
         {
             this.Dispose();
             Signin con = new Signin();
             con.Show();
         }
-
         private void metroTile7_Click(object sender, EventArgs e)
         {
             this.Dispose();
             Reports con = new Reports(cmpID, User);
             con.Show();
         }
-
         private void metroTile6_Click(object sender, EventArgs e)
         {
             this.Dispose();
             OrderItemsSummary form = new OrderItemsSummary(User);
             form.Show();
         }
-
         private void metroTile9_Click(object sender, EventArgs e)
         {
             String DestPath = @"D:\Backup";
@@ -133,7 +124,7 @@ namespace SalesMngmt
 
                 //ServerConnection connection = new ServerConnection(frm.serverName, frm.userName, frm.password);
                 //SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
-                SqlConnection con = new SqlConnection(constring);
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["con"].ConnectionString);
                 ServerConnection connection = new ServerConnection(con);
                 ////To Avoid TimeOut Exception
                 Server sqlServer = new Server(connection);
@@ -166,15 +157,13 @@ namespace SalesMngmt
                 // MessageBox.Show(ex.Message);
             }
         }
-
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
             Environment.Exit(1);
-                //Signin signi = new Signin();
+            //Signin signi = new Signin();
             //signi.Show();
         }
-
         private void metroTile6_Click_2(object sender, EventArgs e)
         {
             Pass signi = new Pass(cmpID, User.Id);
@@ -182,6 +171,3 @@ namespace SalesMngmt
         }
     }
 }
-
-
-

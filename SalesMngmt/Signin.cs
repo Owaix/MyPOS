@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 using System.Windows.Forms;
-using TrialApp;
+//using TrialApp;
 
 namespace SalesMngmt
 {
@@ -20,29 +20,29 @@ namespace SalesMngmt
             //  checkTrail();
         }
 
-        private void checkTrail()
-        {
-            Trail trail = new Trail();
-            DateTime installDate = trail.GetInstallationDate();
-            int launchCount = trail.GetLaunchCount();
+        //private void checkTrail()
+        //{
+        //    Trail trail = new Trail();
+        //    DateTime installDate = trail.GetInstallationDate();
+        //    int launchCount = trail.GetLaunchCount();
 
-            TimeSpan trialDuration = DateTime.Now - installDate;
-            int remainingDays = 30 - trialDuration.Days;
+        //    TimeSpan trialDuration = DateTime.Now - installDate;
+        //    int remainingDays = 30 - trialDuration.Days;
 
-            if (remainingDays > 0)
-            {
-                lblTrail.Text = "Trial period remaining: " + remainingDays + " days";
-                // Continue using the application
-            }
-            else
-            {
-                lblTrail.Text = "Your trial period has expired.";
-                //Close();
-            }
-            // Increment the launch count and save it
-            trail.SaveLaunchCount(launchCount + 1);
+        //    if (remainingDays > 0)
+        //    {
+        //        lblTrail.Text = "Trial period remaining: " + remainingDays + " days";
+        //        // Continue using the application
+        //    }
+        //    else
+        //    {
+        //        lblTrail.Text = "Your trial period has expired.";
+        //        //Close();
+        //    }
+        //    // Increment the launch count and save it
+        //    trail.SaveLaunchCount(launchCount + 1);
 
-        }
+        //}
 
         private void metroTextBox1_Click(object sender, EventArgs e)
         {
